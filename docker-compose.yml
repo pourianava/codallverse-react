@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  codallverse-react:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: codallverse-react:latest
+    container_name: codallverse-react
+    ports:
+      - "80:80"    # Map TCP traffic from port 80 on the host to port 80 in the container
+      - "443:443"  # Map TCP traffic from port 443 on the host to port 443 in the container
+    # restart: unless-stopped
